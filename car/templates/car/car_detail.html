@@ -10,7 +10,6 @@
 </head>
 <div class="container">
 <div class="row">
-  {% for car in object_list %}
   <div class="col-md-3">
     <div class="autos-carousel-item slick-slide slick-active" style="width: 263px;" tabindex="-1" role="option"
                   aria-describedby="slick-slide01" data-slick-index="1" aria-hidden="false">
@@ -21,7 +20,7 @@
       </style>
       <div class="slider-grid__inner slider-grid__inner_mod-b">
         <div class="card__img">
-          <a href="car/{{ car.id }}" tabindex="0">
+          <a href="#" tabindex="0">
             <img width="640" height="362"
               src="{{ car.pictures }}"
               class="img-responsive wp-post-image" alt="">
@@ -35,11 +34,12 @@
             <li><i class="theme-fonts-Agenda"></i>{{ car.year }} </li>
             <li><i class="autofont-highway"></i>{{ car.millage|intcomma }} </li>
             <li><i class="autofont-vehicle"></i>{{ car.get_transmition_display }} </li>
+            <li><i class="autofont-vehicle"></i>{{ car.color }} </li>
+            <li><i class="autofont-vehicle"></i>{{ car.body }} </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-  {% endfor %}
 </div>
 </div>

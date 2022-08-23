@@ -7,6 +7,7 @@ from car.views import *
 urlpatterns = [
     path('makes/', MakeListView.as_view(), name='make_list'),
     path('', CarListView.as_view(), name='car_list'),
+    path('car/<pk>/', CarDetailView.as_view(), name='car_detail'),
 ]
 
 if settings.DEBUG:
